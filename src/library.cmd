@@ -113,7 +113,7 @@ exit /b %errorlevel%
 		)
 
 		:: add the temporary target to the library
-		shlib add "%appdata%\Microsoft\Windows\Libraries\%library%.library-ms" "%tempPath%" 1>nul 2>&1
+		%~dp0shlib\shlib add "%appdata%\Microsoft\Windows\Libraries\%library%.library-ms" "%tempPath%" 1>nul 2>&1
 		if errorlevel (
 			echo.The folder could not be added to the library.
 			exit /b 1
@@ -137,7 +137,7 @@ exit /b %errorlevel%
 		exit /b 0
 	) else (
 		:: add the target to the library
-		shlib add "%appdata%\Microsoft\Windows\Libraries\%library%.library-ms" "%folder%" 1>nul 2>&1
+		%~dp0shlib\shlib add "%appdata%\Microsoft\Windows\Libraries\%library%.library-ms" "%folder%" 1>nul 2>&1
 		if errorlevel (
 			echo.The folder could not be added to the library.
 			exit /b 1
@@ -195,7 +195,7 @@ exit /b %errorlevel%
 	)
 
 	:: remove the target from the library
-	shlib remove "%appdata%\Microsoft\Windows\Libraries\%library%.library-ms" "%folder%" 1>nul 2>&1
+	%~dp0shlib\shlib remove "%appdata%\Microsoft\Windows\Libraries\%library%.library-ms" "%folder%" 1>nul 2>&1
 	if errorlevel (
 		echo.The folder could not be removed from the library.
 		exit /b 1
