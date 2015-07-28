@@ -17,7 +17,19 @@ To remove  a folder (both shared and local) from a library, use the following co
     library -r folderName LibraryName
 
 
+#### Command format
+As I tend to work on multiple platforms, I often mix switch formats (`-a`, `/a` etc.). So for your enlightment, you can use the following schemes:
 
-## Third-Party dependencies
+`-r`: add
+`/r`: add
+`--remove`: add
+
+|   Switch   | Slash | Dash | Double-Dash |
+|:----------:|:-----:|:----:|:-----------:|
+|  **Add**   | `/a`  | `-a` |   `--add`   |
+| **Remove** | `/r`  | `-r` | `--remove`  |
+|  **Help**  | `/?`  | `-h` |  `--help`   |
+
+#### Third-Party dependencies
 To use the tool, you need a single executable from Microsoft, ShLib.exe, which is available as source code [here](http://msdn.microsoft.com/en-us/library/dd940379%28VS.85%29.aspx).  
 **A compiled version is included in this package.**
