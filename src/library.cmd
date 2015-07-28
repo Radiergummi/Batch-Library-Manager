@@ -7,6 +7,9 @@ if [%1] == [--help] (
 ) else if [%1] == [/?] (
 	call :helpAction
 	exit /b 1
+)  else if [%1] == [-h] (
+	call :helpAction
+	exit /b 1
 ) else if [%1] == [] (
 	call :helpAction
 	exit /b 1
