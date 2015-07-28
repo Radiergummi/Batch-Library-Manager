@@ -20,10 +20,6 @@ To remove  a folder (both shared and local) from a library, use the following co
 #### Command format
 As I tend to work on multiple platforms, I often mix switch formats (`-a`, `/a` etc.). So for your enlightment, you can use the following schemes:
 
-`-r`: add
-`/r`: add
-`--remove`: add
-
 |   Switch   | Slash | Dash | Double-Dash |
 |:----------:|:-----:|:----:|:-----------:|
 |  **Add**   | `/a`  | `-a` |   `--add`   |
