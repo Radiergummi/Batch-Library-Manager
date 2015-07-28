@@ -19,4 +19,5 @@ To remove  a folder (both shared and local) from a library, use the following co
 
 
 ## Third-Party dependencies
-To use the tool, you need a single executable from Microsoft, ShLib.exe, which is available as source code [here](http://msdn.microsoft.com/en-us/library/dd940379%28VS.85%29.aspx). **A compiled version is included in this package.**
+To use the tool, you need a single executable from Microsoft, ShLib.exe, which is available as source code [here](http://msdn.microsoft.com/en-us/library/dd940379%28VS.85%29.aspx).  
+**A compiled version is included in this package.**
