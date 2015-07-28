@@ -4,6 +4,9 @@ SetLocal
 if [%1] == [--help] (
 	call :helpAction
 	exit /b 1
+) else if [%1] == [/?] (
+	call :helpAction
+	exit /b 1
 ) else if [%1] == [] (
 	call :helpAction
 	exit /b 1
@@ -13,11 +16,19 @@ if [%1] == [-a] (
 	call :addAction %2 %3
 ) else if [%1] == [--add] (
 	call :addAction %2 %3
-) 
+) else if [%1] == [/a] (
+	call :addAction %2 %3
+) else if [%1] == [/add] (
+	call :addAction %2 %3
+)
 
 if [%1] == [-r] (
 	call :removeAction %2 %3
 ) else if [%1] == [--remove] (
+	call :removeAction %2 %3
+) else if [%1] == [/r] (
+	call :removeAction %2 %3
+) else if [%1] == [/remove] (
 	call :removeAction %2 %3
 )
 
@@ -35,21 +46,17 @@ exit /b %errorlevel%
 	) else (
 		echo.The folder was successfully linked to in the library.
 	)
-
 exit /b %errorlevel%
 
 :removeAction
 	call :remove %1 %2
-	
+
 	if errorlevel (
-		echo.The folder could not be linked to.
+		echo.The folder could not be removed.
 	) else (
-		echo.The folder was successfully linked to in the library.
+		echo.The folder was successfully removed from the library.
 	)
-
 exit /b %errorlevel%
-
-
 
 
 
