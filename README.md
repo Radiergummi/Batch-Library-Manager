@@ -1,5 +1,5 @@
 # Batch-Library-Manager
-Simple batch tool to add and remove network shares or folders from Windows 7+ libraries.
+Simple batch tool to add and remove network shares or folders from Windows 7+ libraries. It is well suited for netlogon scripts or otherwise automating library tasks.
 
 ## Usage
 To add a folder to a library, use the following command:
